@@ -1,5 +1,8 @@
 from django.db import models
-
+""" 
+34.217.184.131
+44.234.233.60
+52.32.132.51 """
 # Create your models here.
 class Tasks(models.Model):
     mavzu = models.CharField(max_length= 150)
