@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     "corsheaders",
+    'import_export',
 ]
 
 MIDDLEWARE = [
@@ -84,12 +85,12 @@ CORS_ALLOWED_ORIGINS = [
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2', #_pscopgy2
         'NAME': 'postgres',
         'USER':'postgres',
-        'PASSWORD': 'Zxcvb123+654', #ahadbek
+        'PASSWORD': 'ahadbek', #Zxcvb123+654
         'HOST': 'localhost',
-        'PORT': 5432 #5433
+        'PORT': 5433 #5432
     }
 }
 
