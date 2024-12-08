@@ -11,13 +11,13 @@ from django.utils import formats
 class Tasks(models.Model):
     mavzu = models.CharField(max_length= 500)
     nomer = models.CharField(max_length=150)
-    sana = models.DateField()
-    muddat = models.DateField()
+    sana = models.DateTimeField(blank=True)
+    muddat = models.DateTimeField(blank=True)
     javobgar= models.CharField(max_length=200)
     topshiriq_turi= models.CharField(max_length=200)
     topshiriq_kimdan = models.CharField(max_length=200)
-    status = models.CharField(max_length=500)
-    natijasi = models.CharField(max_length=500)
+    status = models.CharField(max_length=500, blank=True)
+    natijasi = models.CharField(max_length=500, blank=True  )
 
     def format_datetime(self):
         return formats.date_format(self.sana, "d.M.Y")
