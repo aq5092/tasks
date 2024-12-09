@@ -11,8 +11,8 @@ from django.utils import formats
 class Tasks(models.Model):
     mavzu = models.CharField(max_length= 500)
     nomer = models.CharField(max_length=150)
-    sana = models.DateTimeField(blank=True)
-    muddat = models.DateTimeField(blank=True)
+    sana = models.DateTimeField(auto_created=True)
+    muddat = models.DateTimeField(auto_created=True)
     javobgar= models.CharField(max_length=200)
     topshiriq_turi= models.CharField(max_length=200)
     topshiriq_kimdan = models.CharField(max_length=200)
